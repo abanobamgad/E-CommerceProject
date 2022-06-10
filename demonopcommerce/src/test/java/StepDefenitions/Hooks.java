@@ -1,6 +1,7 @@
 package StepDefenitions;
 
 import Pages.LoginPage;
+import Pages.RegisterPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ public class Hooks
     public static WebDriver driver = null;
 
 LoginPage login;
+RegisterPage register;
 
 
     @Before
@@ -28,6 +30,7 @@ LoginPage login;
       driver.navigate().to("https://demo.nopcommerce.com/");
 
       login = new LoginPage(driver);
+      register = new RegisterPage(driver);
     }
 
     @After
